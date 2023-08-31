@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [nopCommerce]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="chromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.FetchProd_BasedOnPrice">
+        <methods>
+          <include name="FetchProducts"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.FetchProd_BasedOnPrice -->
+    </classes>
+  </test> <!-- chromeTest(failed) -->
+</suite> <!-- Failed suite [nopCommerce] -->

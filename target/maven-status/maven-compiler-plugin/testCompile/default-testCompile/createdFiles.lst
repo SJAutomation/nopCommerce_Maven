@@ -1,0 +1,16 @@
+pageObjects\AddProducts.class
+testCases\TC_AddCustomerTest.class
+testBase\BaseClass.class
+pageObjects\EditCustomerpage.class
+pageObjects\ProductsList.class
+pageObjects\LoginPage.class
+testCases\DeleteCustomer.class
+testCases\EditCustomer.class
+pageObjects\SearchCustomerPage.class
+testCases\TC_LoginDDT.class
+testCases\TC_SearchCustomerByName.class
+utilities\XLUtility.class
+testCases\TC_LoginTest.class
+pageObjects\AddcustomerPage.class
+pageObjects\DeleteCustomerPage.class
+testCases\TC_SearchCustomerByEmail.class

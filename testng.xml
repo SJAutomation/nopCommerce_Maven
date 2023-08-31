@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="nopCommerce" parallel="tests" thread-count="2">
+	
+	
+	<test name="chromeTest">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+		<!--  <class name="testCases.TC_LoginTest" />   
+		 <class name="testCases.TC_LoginDDT" />   
+	     <class name="testCases.TC_AddCustomerTest" />  
+		  <class name="testCases.TC_SearchCustomerByEmail" />   
+		  <class name="testCases.TC_SearchCustomerByName" />  
+		   <class name="testCases.TC_FetchCustomersList" />   
+		   <class name="testCases.EditCustomer" /> 
+		    <class name="testCases.DeleteCustomer" /> 
+	 
+	   <class name="testCases.FetchProd_BasedOnPrice" />  
+	    <class name="testCases.TC_FetchCustomersList" /> -->
+	    <class name="testCases.TC_AddCustomerTest" />  
+	     <class name="testCases.DeleteCustomer" /> 
+		</classes>
+	</test> 
+	
+	
+</suite>
