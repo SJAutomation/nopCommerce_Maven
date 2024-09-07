@@ -4,13 +4,13 @@
   <test thread-count="2" parallel="tests" name="chromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.FetchProd_BasedOnPrice">
+      <class name="testCases.TC_LoginTest">
         <methods>
-          <include name="FetchProducts"/>
+          <include name="loginTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.FetchProd_BasedOnPrice -->
+      </class> <!-- testCases.TC_LoginTest -->
     </classes>
   </test> <!-- chromeTest(failed) -->
 </suite> <!-- Failed suite [nopCommerce] -->

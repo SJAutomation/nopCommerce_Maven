@@ -6,8 +6,8 @@
 	<test name="chromeTest">
 		<parameter name="browser" value="chrome"/>
 		<classes>
-		<!--  <class name="testCases.TC_LoginTest" />   
-		 <class name="testCases.TC_LoginDDT" />   
+		  <class name="testCases.TC_LoginTest" />   
+		<!-- <class name="testCases.TC_LoginDDT" />   
 	     <class name="testCases.TC_AddCustomerTest" />  
 		  <class name="testCases.TC_SearchCustomerByEmail" />   
 		  <class name="testCases.TC_SearchCustomerByName" />  
@@ -16,9 +16,9 @@
 		    <class name="testCases.DeleteCustomer" /> 
 	 
 	   <class name="testCases.FetchProd_BasedOnPrice" />  
-	    <class name="testCases.TC_FetchCustomersList" /> -->
+	    <class name="testCases.TC_FetchCustomersList" /> 
 	    <class name="testCases.TC_AddCustomerTest" />  
-	     <class name="testCases.DeleteCustomer" /> 
+	     <class name="testCases.DeleteCustomer" /> -->
 		</classes>
 	</test> 
 	

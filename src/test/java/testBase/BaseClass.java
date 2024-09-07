@@ -30,7 +30,7 @@ import org.apache.log4j.PropertyConfigurator;
 public class BaseClass {
 	
 	
-	public WebDriver driver;
+	public static WebDriver driver;
 	public Properties configPropObj;
 	public static Logger logger;
 	
@@ -65,8 +65,8 @@ public class BaseClass {
 		configPropObj.load(configfile);
 		// end of loading config.properties file
 		
-		ChromeOptions opt=new ChromeOptions();
-		opt.addArguments("--remote-allow-origins=*");
+		//ChromeOptions opt=new ChromeOptions();
+		//opt.addArguments("--remote-allow-origins=*");
 		
 		
 
@@ -76,14 +76,14 @@ public class BaseClass {
 		  if(br.equalsIgnoreCase("chrome")){
 				//set path to chromedriver.exe
 			 // WebDriverManager.chromedriver().setup();
-			 System.setProperty("webdriver.chrome.driver","./Drivers//chromedriver.exe");
+			 //System.setProperty("webdriver.chrome.driver","./Drivers//chromedriver.exe");
 				//create chrome instance
-				driver = new ChromeDriver(opt);
+				driver = new ChromeDriver();
 			}
 
 		  else if(br.equalsIgnoreCase("Edge")){
 				//create firefox instance
-				System.setProperty("webdriver.edge.driver", "./Drivers//msedgedriver.exe");
+			//	System.setProperty("webdriver.edge.driver", "./Drivers//msedgedriver.exe");
 			  //WebDriverManager.edgedriver().setup();	
 			  driver = new EdgeDriver();
 		  }
@@ -91,7 +91,7 @@ public class BaseClass {
 
 		  else if(br.equalsIgnoreCase("Firefox")){
 				//create firefox instance
-				System.setProperty("webdriver.gecko.driver", "./Drivers//geckodriver.exe");
+				//System.setProperty("webdriver.gecko.driver", "./Drivers//geckodriver.exe");
 				//WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 			}

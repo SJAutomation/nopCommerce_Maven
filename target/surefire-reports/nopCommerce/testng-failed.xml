@@ -4,13 +4,13 @@
   <test thread-count="2" parallel="tests" name="chromeTest(failed)" verbose="0">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testCases.DeleteCustomer">
+      <class name="testCases.TC_LoginTest">
         <methods>
+          <include name="loginTest"/>
           <include name="tearDown"/>
-          <include name="DeleteExistingCustomer"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.DeleteCustomer -->
+      </class> <!-- testCases.TC_LoginTest -->
     </classes>
   </test> <!-- chromeTest(failed) -->
 </suite> <!-- Failed suite [nopCommerce] -->
