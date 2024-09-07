@@ -22,6 +22,7 @@ import utilities.XLUtility;
 			logger.info(" *** Starting TC_LoginDDT *** ");
 			
 			logger.info(" *** Opening Application URL *** ");
+			
 			driver.get(configPropObj.getProperty("baseURL"));
 			
 			logger.info(" *** Loging into Application *** ");
@@ -34,39 +35,44 @@ import utilities.XLUtility;
 			String exp_title="Dashboard / nopCommerce administration";
 			String act_title=driver.getTitle();
 			
-			if(exp.equals("Valid"))
+			if(exp.equalsIgnoreCase("Valid"))
 			{
 				
 				
 				if(exp_title.equals(act_title))
 				{
-					//driver.findElement(By.linkText("Logout")).click();
-					Thread.sleep(3000);
-					lp.clickLogout();
+					driver.findElement(By.linkText("Logout")).click();
 					Assert.assertTrue(true);
+					
+					
 				}
 				else 
 				{
 					logger.info("Login failed....");
+					
 					Assert.assertTrue(false);
+					
+					
 				}
 			}
 			
-			if(exp.equals("Invalid"))
+			if(exp.equalsIgnoreCase("Invalid"))
 			{
-				if(exp_title.equals(act_title))
-				{
-					//driver.findElement(By.linkText("Logout")).click();
-					Thread.sleep(3000);
-					lp.clickLogout();
-					logger.info("Login failed....");
+//				if(exp_title.equals(act_title))
+//				{
+//					driver.findElement(By.linkText("Logout")).click();
+//					
+//					logger.info("Login failed....");
 					Assert.assertTrue(false);
+					
 				}
 				else
 				{				
+					
 					Assert.assertTrue(true);
+					
 				}
-			}
+			
 		
 			logger.info(" *** Finished TC_LoginDDT *** ");
 		}
@@ -82,14 +88,14 @@ import utilities.XLUtility;
 			
 			XLUtility xlutil=new XLUtility(path);
 			
-			int totalrows=xlutil.getRowCount("Sheet1");	
-			int totalcols=xlutil.getCellCount("Sheet1",1);
+			int totalrows=xlutil.getRowCount("Sheet1");	//4
+			int totalcols=xlutil.getCellCount("Sheet1",1); //3
 					
 			String logindata[][]=new String[totalrows][totalcols];
 			
-			for(int i=1;i<=totalrows;i++)  //1
+			for(int i=1;i<=totalrows;i++)  //1<=4
 			{		
-				for(int j=0;j<totalcols;j++)  //0
+				for(int j=0;j<totalcols;j++)  //0<3
 				{
 					logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
 				}
