@@ -30,7 +30,7 @@ import utilities.XLUtility;
 			lp.setUserName(user);
 			lp.setPassword(pwd);
 			lp.clickLogin();
-			Thread.sleep(5000);
+			Thread.sleep(3000);
 			
 			String exp_title="Dashboard / nopCommerce administration";
 			String act_title=driver.getTitle();
